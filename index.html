@@ -1,1 +1,30 @@
-<h1>I am a test....</h1>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>  
+
+    <button id="ajax">ajax call</button>
+    
+    <script type="text/javascript">
+        
+    
+        $('#ajax').click(function(){ 
+            
+             $.ajax({ 
+                 type: "GET",
+                 dataType: "json",
+                 url: "get_rest",
+                 success: function(data){        
+                    console.log(data)
+                 }
+             });
+        });
+    
+    </script>
+    
+    
+    
+    </body>
+</html>

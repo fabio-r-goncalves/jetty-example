@@ -17,7 +17,7 @@ public class BlockingServlet extends HttpServlet {
         SNMPHandler snmpHandler = new SNMPHandler();
         String resp = snmpHandler.snmpGet();
 
-        response.setContentType("text/html");
+        response.setContentType("application/json");
         response.setStatus(HttpServletResponse.SC_OK);
         response.getWriter().println("{ \"response\": \""+resp+"\"}");
     }
