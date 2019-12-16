@@ -13,9 +13,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class BlockingServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("application/json");
+
+        SNMPHandler snmpHandler = new SNMPHandler();
+        String resp = snmpHandler.snmpGet();
+
+        response.setContentType("text/html");
         response.setStatus(HttpServletResponse.SC_OK);
-        response.getWriter().println("{ \"status\": \"ok\"}");
+        response.getWriter().println("{ \"response\": \""+resp+"\"}");
     }
     
 }

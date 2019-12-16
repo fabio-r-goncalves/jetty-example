@@ -20,6 +20,13 @@
             <artifactId>jetty-servlet</artifactId>
             <version>9.4.3.v20170317</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.snmp4j/snmp4j -->
+        <dependency>
+            <groupId>org.snmp4j</groupId>
+            <artifactId>snmp4j</artifactId>
+            <version>3.3.3</version>
+        </dependency>
+
     </dependencies>
     
 </project>
